@@ -1558,7 +1558,7 @@
         "spacecraft": "Bimodal NTR",
         "engine_config": "BNTR",
         "upgrade": false,
-        "entry_cost_mods": "400000, PEWEE100-Hydrogen",
+        "entry_cost_mods": "400000,PEWEE100-Hydrogen,TurbineReactors",
         "identical_part_name": "",
         "module_tags": []
     },
@@ -3576,7 +3576,7 @@
         "spacecraft": "",
         "engine_config": "KIWIA24",
         "upgrade": false,
-        "entry_cost_mods": "16000",
+        "entry_cost_mods": "16000,SpaceReactors",
         "identical_part_name": "",
         "module_tags": []
     },
@@ -7096,6 +7096,27 @@
         "module_tags": []
     },
     {
+        "name": "RD-0203U",
+        "title": "RD-0203U",
+        "description": "",
+        "mod": "Engine_Config",
+        "cost": "0",
+        "entry_cost": "0",
+        "category": "STAGED",
+        "info": "",
+        "year": "1967",
+        "technology": "stagedCombustion1967",
+        "ro": true,
+        "orphan": false,
+        "rp0_conf": true,
+        "spacecraft": "",
+        "engine_config": "RD0203",
+        "upgrade": true,
+        "entry_cost_mods": "5000,RD-0210",
+        "identical_part_name": "",
+        "module_tags": []
+    },
+    {
         "name": "RD-0205",
         "title": "RD-0205",
         "description": "",
@@ -7334,7 +7355,7 @@
         "spacecraft": "",
         "engine_config": "RD0410MID",
         "upgrade": false,
-        "entry_cost_mods": "9000",
+        "entry_cost_mods": "9000,SpaceReactors",
         "identical_part_name": "",
         "module_tags": []
     },
