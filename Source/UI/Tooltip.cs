@@ -6,8 +6,8 @@ namespace RP0
 {
     public class Tooltip
     {
-        private const float TooltipMaxWidth = 200f;
-        private const double TooltipShowDelay = 500;
+        private static float TooltipMaxWidth => 200f * UIHolder.UIScale;
+        private static double TooltipShowDelay => 500 * UIHolder.UIScale;
 
         private static readonly int _tooltipWindowId = "RP0Tooltip".GetHashCode();
         private static GUIStyle _tooltipStyle;
@@ -34,9 +34,13 @@ namespace RP0
         {
             if (_tooltipStyle == null)
             {
-                _tooltipStyle = new GUIStyle(HighLogic.Skin.label);
+                _tooltipStyle = new GUIStyle(UIHolder.RescaledSkin.label);
                 _tooltipStyle.normal.textColor = new Color32(224, 224, 224, 255);
-                _tooltipStyle.padding = new RectOffset(3, 3, 3, 3);
+                _tooltipStyle.padding = new RectOffset(
+                    (int)(3 * UIHolder.UIScale), 
+                    (int)(3 * UIHolder.UIScale), 
+                    (int)(3 * UIHolder.UIScale), 
+                    (int)(3 * UIHolder.UIScale));
                 _tooltipStyle.alignment = TextAnchor.MiddleCenter;
             }
 

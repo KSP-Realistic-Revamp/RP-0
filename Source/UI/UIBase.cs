@@ -14,11 +14,11 @@ namespace RP0
 
         public UIBase()
         {
-            RightLabel = new GUIStyle(HighLogic.Skin.label)
+            RightLabel = new GUIStyle(UIHolder.RescaledSkin.label)
             {
                 alignment = TextAnchor.MiddleRight
             };
-            BoldLabel = new GUIStyle(HighLogic.Skin.label)
+            BoldLabel = new GUIStyle(UIHolder.RescaledSkin.label)
             {
                 fontStyle = FontStyle.Bold
             };
@@ -27,10 +27,11 @@ namespace RP0
                 fontStyle = FontStyle.Bold
             };
 
-            PressedButton = new GUIStyle(HighLogic.Skin.button);
+            PressedButton = new GUIStyle(UIHolder.RescaledSkin.button);
             PressedButton.normal = PressedButton.active;
 
-            InfoButton = new GUIStyle(HighLogic.Skin.button)
+            // TODO redo this button
+            InfoButton = new GUIStyle(UIHolder.RescaledSkin.button)
             {
                 alignment = TextAnchor.MiddleCenter,
                 fixedHeight = 17f,
@@ -75,12 +76,12 @@ namespace RP0
 
         public bool RenderToggleButton(string text, bool selected, params GUILayoutOption[] options)
         {
-            return GUILayout.Button(text, selected ? PressedButton : HighLogic.Skin.button, options);
+            return GUILayout.Button(text, selected ? PressedButton : UIHolder.RescaledSkin.button, options);
         }
 
         public bool RenderToggleButton(GUIContent c, bool selected, params GUILayoutOption[] options)
         {
-            return GUILayout.Button(c, selected ? PressedButton : HighLogic.Skin.button, options);
+            return GUILayout.Button(c, selected ? PressedButton : UIHolder.RescaledSkin.button, options);
         }
     }
 }
